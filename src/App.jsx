@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Analytics } from '@vercel/analytics/react';
 import CanvasSequence from './components/CanvasSequence';
 import TypographyLayer from './components/TypographyLayer';
 import ParticleOverlay from './components/ParticleOverlay';
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <div className="relative w-full h-[500vh] bg-rayyan-black">
         {/* Sticky container that holds the canvas and overlays */}
         <div className="sticky top-0 w-full h-screen overflow-hidden">
